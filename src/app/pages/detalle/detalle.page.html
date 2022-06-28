@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-back-button color="tertiary" defaultHref="/lista"></ion-back-button>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title>detalle</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card *ngFor="let uno of pais">
+    <ion-card-header>
+      <ion-title>
+        Escudo de armas
+      </ion-title>
+
+      <br>
+      <ion-img src="{{ uno.coatOfArms.png }}"></ion-img>
+    </ion-card-header>
+
+    <ion-card-header>
+      <ion-card-title>{{ uno.name.common }}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p>Capital: {{ uno.capital }}</p>
+      <p>Región: {{uno.region}}</p>
+      <p>Población: {{ uno.population }}</p>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

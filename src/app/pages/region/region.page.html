@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-back-button color="tertiary" defaultHref="/"></ion-back-button>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title>region</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card *ngFor="let pais of listaPaises" (click)="detallePais(pais.name.common) ">
+    <ion-card-header>
+      <ion-img src="{{ pais.flags.png }}"></ion-img>
+    </ion-card-header>
+
+    <ion-card-header>
+      <ion-card-title>{{ pais.name.common }}</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+</ion-content>

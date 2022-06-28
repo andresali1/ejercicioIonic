@@ -11,6 +11,22 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'lista',
+    loadChildren: () => import('./pages/lista/lista.module').then( m => m.ListaPageModule)
+  },
+  {
+    path: 'detalle/:id',
+    loadChildren: () => import('./pages/detalle/detalle.module').then( m => m.DetallePageModule)
+  },
+  {
+    path: 'lenguaje/:id',
+    loadChildren: () => import('./pages/lenguaje/lenguaje.module').then( m => m.LenguajePageModule)
+  },
+  {
+    path: 'region/:id',
+    loadChildren: () => import('./pages/region/region.module').then( m => m.RegionPageModule)
+  }
 ];
 
 @NgModule({

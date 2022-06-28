@@ -1,5 +1,7 @@
 {
   "name": "consumoApi",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

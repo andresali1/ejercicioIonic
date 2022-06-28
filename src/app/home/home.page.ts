@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,23 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  nomIdioma = '';
+
+  constructor(
+    private route: Router
+  ) {}
+
+  mostrarTodos() {
+    this.route.navigateByUrl('/lista');
+  }
+
+  buscarRegion(title: string) {
+    this.route.navigateByUrl(`/region/${title}`);
+  }
+
+  buscarIdioma() {
+    this.route.navigateByUrl(`/lenguaje/${this.nomIdioma}`);
+    this.nomIdioma = '';
+  }
 
 }
